@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!-- this will contain our game body -->
+    <div class="wrapper">
+      <h1>Welcome to the <br> <span>Number Guessing Game</span></h1>
+      <!-- display our message -->
+      <p class="message">Message</p>
+      <p>Total Attempt : <span class="attempt">0</span></p>
+      <form onsubmit="playGame(event)">
+        <input class="userInput" type="number" required />
+        <button type="submit">Check Ans</button>
+      </form>
+    </div>
+    <script src="./js/scripu.js"></script>
+  </body>
+</html>
