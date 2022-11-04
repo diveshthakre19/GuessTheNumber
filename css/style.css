@@ -1,54 +1,84 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #5DA3FA;
-    display: flex;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
+body {
+  background-color: #5da3fa;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  color: #032753;
 }
 
-h1{
-    text-align: center;
+h1 {
+  text-align: center;
 }
 
-span{
-    color: #a70e0e;
+span {
+  color: #a70e0e;
+  font-weight: 600;
 }
 
-.wrapper{
-    background-color: #E5D68A;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    gap: 2rem;
-    font-size: 1.5rem;
-    border-radius: .5rem;
-    box-shadow: 0 0 20px -3px black
+.wrapper {
+  background-color: #e5d68a;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px -3px black;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+
+.playArea {
+  background-color: #e5d68a;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  display: none;
 }
-input, select{
-    font-size: 1.5rem;
-    width: 6rem;
-    padding: .5rem;
-    border-radius: .5rem;
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
- button{
-    padding: .3rem 2.5rem;
-    background: #3DBE29;
-    font-size: 1.5rem;
-    font-weight: 200;
-    border: none;
-    border-radius: .5rem;
- }
+input,
+select {
+  font-size: 1.5rem;
+  width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+button {
+  padding: 0.3rem 2.5rem;
+  background: #3dbe29;
+  font-size: 1.5rem;
+  font-weight: 200;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.back {
+  background: #8d3daf;
+  padding: 0.3rem 0.8rem;
+  color: #fff;
+}
+
+.levelSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

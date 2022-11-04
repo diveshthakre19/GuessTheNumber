@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body>
-    <!-- this will contain our game body -->
-    <div class="wrapper">
-      <h1>Welcome to the <br> <span>Number Guessing Game</span></h1>
-      <!-- Display levels  -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- this will contain our game body -->
+  <div class="wrapper">
+    <h1>Welcome to the <br> <span>Number Guessing Game</span></h1>
+    <!-- Display levels  -->
+    <div class="levelSelection">
+      <h3>Select Levels</h3>
       <select name="levels" id="levels">
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
-      <button onclick="startGame()" >start</button>
-      <!-- display our message -->
+      <button id="btn" onclick="startGame()">Start Game</button>
+    </div>
+    <!-- display our message -->
+    <div class="playArea">
       <p class="message">Guess the Number between <span>1-10</span></p>
       <p>Total Attempt : <span class="attempt">0</span></p>
       <form onsubmit="playGame(event)">
         <input class="userInput" type="number" required />
         <button type="submit">Check Ans</button>
-      </form>
+        <button class="back" onclick="back()">Change level</button>
     </div>
-    <script src="./js/script.js"></script>
-  </body>
+    </form>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
