@@ -1,29 +1,56 @@
 // for easy : 0-10
     // for medium : 0-30
     // for hard : 0-100
-    let computerGuess = Math.floor(Math.random() * 11);
+    let computerGuess = ""
     let message = document.querySelector(".message");
     let userInput = document.querySelector(".userInput");
     let attempt = document.querySelector(".attempt");
+    let levels = document.querySelector("select") 
+    let difficulity = document.querySelector(".message span")
 
+    
+   function  startGame (){
+    if(levels.value === "easy"){
+      computerGuess = Math.floor(Math.random() * 11);
+      console.log(computerGuess);
+
+      difficulity.innerHTML = "1-10"
+    }else if(levels.value  === 'medium'){
+      computerGuess = Math.floor(Math.random() * 31);
+      console.log(computerGuess);
+
+      difficulity.innerHTML = "1-30"
+    }else if(levels.value  === "hard"){
+      computerGuess = Math.floor(Math.random() * 111);
+      console.log(computerGuess);
+      difficulity.innerHTML = "1-100"
+    }
+
+   }
+      
+    
+    // levels.addEventListener("change",setLevels())
+    
     const playGame = (event) => {
       event.preventDefault();
       if (computerGuess == userInput.value) {
         message.innerHTML = "You won the Game";
         celebrate();
+        startGame()
         setTimeout(() => {
           // window.location.reload();
           computerGuess = Math.floor(Math.random() * 11);
-          message.innerHTML = "Message";
+          // message.innerHTML = "Message";
           userInput.value = "";
           attempt.innerHTML = "0";
         }, 1500);
       } else if (computerGuess > userInput.value) {
+        userInput.value = "";
         message.innerHTML = "Guess a greater number";
       } else if (computerGuess < userInput.value) {
+        userInput.value = "";
         message.innerHTML = "Guess a smaller number";
       }
-
       attempt.innerHTML = Number(attempt.innerHTML) + 1;
     };
 

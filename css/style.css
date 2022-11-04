@@ -38,9 +38,11 @@ form{
     align-items: center;
     gap: 1rem;
 }
-input{
+input, select{
     font-size: 1.5rem;
-    width: 50%;
+    width: 6rem;
+    padding: .5rem;
+    border-radius: .5rem;
 }
  button{
     padding: .3rem 2.5rem;

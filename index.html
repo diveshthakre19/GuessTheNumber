@@ -12,6 +12,13 @@
     <!-- this will contain our game body -->
     <div class="wrapper">
       <h1>Welcome to the <br> <span>Number Guessing Game</span></h1>
+      <!-- Display levels  -->
+      <select name="levels" id="levels">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button onclick="startGame()" >start</button>
       <!-- display our message -->
       <p class="message">Guess the Number between <span>1-10</span></p>
       <p>Total Attempt : <span class="attempt">0</span></p>
